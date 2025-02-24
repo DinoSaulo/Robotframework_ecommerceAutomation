@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.2 on win32)" generated="2025-02-22T17:21:33.966141" rpa="false" schemaversion="5">
+<suite id="s1" name="Home Tests" source="C:\Users\saulo\projects\Robotframework_ecommerceAutomation\tests\home_tests.robot">
+<test id="s1-t1" name="Scenario: Home Page Loads Successfully the header elements" line="16">
+<kw name="Open the browser" owner="home_steps" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:34.287094" level="INFO">Opening browser 'Chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-22T17:21:34.286786" elapsed="6.212125"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1200</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-02-22T17:21:40.499196" elapsed="0.035064"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:34.286056" elapsed="6.248442"/>
+</kw>
+<kw name="Given I am in the &quot;home&quot; page" owner="home_steps" source_name="Given I am in the &quot;${page}&quot; page">
+<if>
+<branch type="IF" condition="$page == &quot;home&quot;">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:40.536542" level="INFO">Executing JavaScript:
+window.location.href='/'
+Without any arguments.</msg>
+<arg>window.location.href='/'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-22T17:21:40.536056" elapsed="0.897042"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:40.535692" elapsed="0.897500"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>"Error page not defined"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-22T17:21:41.433416" elapsed="0.000087"/>
+</kw>
+<status status="NOT RUN" start="2025-02-22T17:21:41.433256" elapsed="0.000319"/>
+</branch>
+<status status="PASS" start="2025-02-22T17:21:40.535646" elapsed="0.898007"/>
+</if>
+<status status="PASS" start="2025-02-22T17:21:40.535267" elapsed="0.898481"/>
+</kw>
+<kw name="Then I should see the website logo" owner="home_steps">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.459393" level="INFO">Element 'id:header_logo' is displayed.</msg>
+<arg>id:header_logo</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.434462" elapsed="0.025063"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.474394" level="INFO">Element 'css:img[alt='My Shop']' attribute 'src' contains value 'http://www.automationpractice.pl/img/logo.jpg'.</msg>
+<arg>css:img[alt='My Shop']</arg>
+<arg>src</arg>
+<arg>${BASE_URL}/img/logo.jpg</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.459761" elapsed="0.014750"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:41.434127" elapsed="0.040494"/>
+</kw>
+<kw name="And I should see the sale image" owner="home_steps">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.492350" level="INFO">Element 'xpath://header[@id='header']//a/img[@class='img-responsive']' is displayed.</msg>
+<arg>xpath://header[@id='header']//a/img[@class='img-responsive']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.475221" elapsed="0.017231"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:41.474963" elapsed="0.017607"/>
+</kw>
+<kw name="And I should see the search bar" owner="home_steps">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.509822" level="INFO">Element 'css:button[name='submit_search']' is displayed.</msg>
+<arg>css:button[name='submit_search']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.493175" elapsed="0.016781"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.526014" level="INFO">Element 'id:search_query_top' is displayed.</msg>
+<arg>id:search_query_top</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.510185" elapsed="0.015935"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.537794" level="INFO">Element 'id:search_query_top' attribute 'placeholder' contains value 'Search'.</msg>
+<arg>id:search_query_top</arg>
+<arg>placeholder</arg>
+<arg>Search</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.526310" elapsed="0.011605"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.552125" level="INFO">Element 'id:searchbox' attribute 'method' contains value 'get'.</msg>
+<arg>id:searchbox</arg>
+<arg>method</arg>
+<arg>get</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.538104" elapsed="0.014174"/>
+</kw>
+<kw name="Element Attribute Value Should Be" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.564536" level="INFO">Element 'id:searchbox' attribute 'action' contains value 'http://www.automationpractice.pl/index.php?controller=search'.</msg>
+<arg>id:searchbox</arg>
+<arg>action</arg>
+<arg>${URL}?controller=search</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.552494" elapsed="0.012196"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:41.492915" elapsed="0.071954"/>
+</kw>
+<kw name="And I should see the &quot;WOMEN&quot;, &quot;DRESSES&quot;, &quot;T-SHIRTS&quot; and &quot;BLOG&quot; menu categories" owner="home_steps" source_name="And I should see the &quot;${firstOption}&quot;, &quot;${secondOption}&quot;, &quot;${thirdOption}&quot; and &quot;${fourthOption}&quot; menu categories">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.581785" level="INFO">Element 'xpath://div[@id='block_top_menu']/ul/li/a[@title='Women']' is displayed.</msg>
+<arg>xpath://div[@id='block_top_menu']/ul/li/a[@title='Women']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.565764" elapsed="0.016186"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.601230" level="INFO">Element 'xpath://div[@id='block_top_menu']/ul/li/a[@title='Women']' contains text 'WOMEN'.</msg>
+<arg>xpath://div[@id='block_top_menu']/ul/li/a[@title='Women']</arg>
+<arg>${firstOption}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.582179" elapsed="0.019158"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.616748" level="INFO">Element 'xpath://div[@id='block_top_menu']/ul/li/a[@title='Dresses']' is displayed.</msg>
+<arg>xpath://div[@id='block_top_menu']/ul/li/a[@title='Dresses']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.601581" elapsed="0.015275"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.631442" level="INFO">Element 'xpath://div[@id='block_top_menu']/ul/li/a[@title='Dresses']' contains text 'DRESSES'.</msg>
+<arg>xpath://div[@id='block_top_menu']/ul/li/a[@title='Dresses']</arg>
+<arg>${secondOption}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.617036" elapsed="0.014514"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.648748" level="INFO">Element 'xpath://div[@id='block_top_menu']/ul/li/a[@title='T-shirts']' is displayed.</msg>
+<arg>xpath://div[@id='block_top_menu']/ul/li/a[@title='T-shirts']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.631969" elapsed="0.016888"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.662803" level="INFO">Element 'xpath://div[@id='block_top_menu']/ul/li/a[@title='T-shirts']' contains text 'T-SHIRTS'.</msg>
+<arg>xpath://div[@id='block_top_menu']/ul/li/a[@title='T-shirts']</arg>
+<arg>${thirdOption}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.649033" elapsed="0.013884"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.688513" level="INFO">Element 'xpath://div[@id='block_top_menu']/ul/li/a[@title='Blog']' is displayed.</msg>
+<arg>xpath://div[@id='block_top_menu']/ul/li/a[@title='Blog']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.663101" elapsed="0.025519"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.700808" level="INFO">Element 'xpath://div[@id='block_top_menu']/ul/li/a[@title='Blog']' contains text 'BLOG'.</msg>
+<arg>xpath://div[@id='block_top_menu']/ul/li/a[@title='Blog']</arg>
+<arg>${fourthOption}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.688809" elapsed="0.012110"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:41.565436" elapsed="0.135588"/>
+</kw>
+<kw name="And I should see the Cart button" owner="home_steps">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.716809" level="INFO">Element '//div[@class='shopping_cart']/a' is displayed.</msg>
+<arg>//div[@class='shopping_cart']/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.701617" elapsed="0.015330"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:41.701356" elapsed="0.015702"/>
+</kw>
+<kw name="And I should see the Contact Us and Login button" owner="home_steps">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.733978" level="INFO">Element 'id:contact-link' is displayed.</msg>
+<arg>id:contact-link</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.717810" elapsed="0.016271"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.748955" level="INFO">Element 'id:contact-link' contains text 'Contact us'.</msg>
+<arg>id:contact-link</arg>
+<arg>Contact us</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.734253" elapsed="0.014836"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.764558" level="INFO">Element 'xpath://div[@class='header_user_info']/a' is displayed.</msg>
+<arg>xpath://div[@class='header_user_info']/a</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.749314" elapsed="0.015346"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.776701" level="INFO">Element '//div[@class='header_user_info']/a' contains text 'Sign in'.</msg>
+<arg>//div[@class='header_user_info']/a</arg>
+<arg>Sign in</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.764833" elapsed="0.011970"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:41.717461" elapsed="0.059447"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:34.285337" elapsed="7.491838"/>
+</test>
+<test id="s1-t2" name="Scenario: Home Page should not contains products on Popular tab" line="25">
+<kw name="Open the browser" owner="home_steps" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:41.778889" level="INFO">Opening browser 'Chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-22T17:21:41.778674" elapsed="6.296411"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1200</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-02-22T17:21:48.075377" elapsed="0.037407"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:41.778365" elapsed="6.335059"/>
+</kw>
+<kw name="Given I am in the &quot;home&quot; page" owner="home_steps" source_name="Given I am in the &quot;${page}&quot; page">
+<if>
+<branch type="IF" condition="$page == &quot;home&quot;">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:48.115266" level="INFO">Executing JavaScript:
+window.location.href='/'
+Without any arguments.</msg>
+<arg>window.location.href='/'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-22T17:21:48.114751" elapsed="0.928473"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:48.114224" elapsed="0.929090"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>"Error page not defined"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-22T17:21:49.043526" elapsed="0.000031"/>
+</kw>
+<status status="NOT RUN" start="2025-02-22T17:21:49.043370" elapsed="0.000225"/>
+</branch>
+<status status="PASS" start="2025-02-22T17:21:48.114186" elapsed="0.929440"/>
+</if>
+<status status="PASS" start="2025-02-22T17:21:48.113926" elapsed="0.929758"/>
+</kw>
+<kw name="When I click on &quot;Popular&quot; tab" owner="home_steps" source_name="When I click on &quot;${tabName}&quot; tab">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:49.044649" level="INFO">Clicking element 'xpath://a[text()='Popular']'.</msg>
+<arg>xpath://a[text()='${tabName}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T17:21:49.044306" elapsed="0.103806"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:49.043999" elapsed="0.104311"/>
+</kw>
+<kw name="Then I receive the message &quot;No featured products at this time&quot; on home page" owner="home_steps" source_name="Then I receive the message &quot;${message}&quot; on home page">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:49.173860" level="INFO">Element 'xpath://ul[@id='homefeatured']/li' contains text 'No featured products at this time'.</msg>
+<arg>xpath://ul[@id='homefeatured']/li</arg>
+<arg>No featured products at this time</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-02-22T17:21:49.149495" elapsed="0.024466"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:49.148919" elapsed="0.025164"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:41.777920" elapsed="7.396435"/>
+</test>
+<test id="s1-t3" name="Scenario: Home Page should contains some products on Best Sellers tab" line="30">
+<kw name="Open the browser" owner="home_steps" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:49.176129" level="INFO">Opening browser 'Chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-22T17:21:49.175829" elapsed="6.283255"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1200</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-02-22T17:21:55.459350" elapsed="0.034041"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:49.175525" elapsed="6.318027"/>
+</kw>
+<kw name="Given I am in the &quot;home&quot; page" owner="home_steps" source_name="Given I am in the &quot;${page}&quot; page">
+<if>
+<branch type="IF" condition="$page == &quot;home&quot;">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:55.495235" level="INFO">Executing JavaScript:
+window.location.href='/'
+Without any arguments.</msg>
+<arg>window.location.href='/'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-22T17:21:55.494748" elapsed="0.865460"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:55.494441" elapsed="0.865854"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>"Error page not defined"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-22T17:21:56.360515" elapsed="0.000033"/>
+</kw>
+<status status="NOT RUN" start="2025-02-22T17:21:56.360350" elapsed="0.000240"/>
+</branch>
+<status status="PASS" start="2025-02-22T17:21:55.494403" elapsed="0.866219"/>
+</if>
+<status status="PASS" start="2025-02-22T17:21:55.494064" elapsed="0.866631"/>
+</kw>
+<kw name="When I click on &quot;Best Sellers&quot; tab" owner="home_steps" source_name="When I click on &quot;${tabName}&quot; tab">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:56.362502" level="INFO">Clicking element 'xpath://a[text()='Best Sellers']'.</msg>
+<arg>xpath://a[text()='${tabName}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T17:21:56.361683" elapsed="0.130014"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:56.361005" elapsed="0.130889"/>
+</kw>
+<kw name="Then I see some products on the home page" owner="home_steps">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:56.504072" level="INFO">${COUNT} = 6</msg>
+<var>${COUNT}</var>
+<arg>xpath://ul[@id='blockbestsellers']/li</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2025-02-22T17:21:56.492817" elapsed="0.011326"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${COUNT} != 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2025-02-22T17:21:56.504334" elapsed="0.000492"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:56.492422" elapsed="0.012537"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:49.175103" elapsed="7.330130"/>
+</test>
+<test id="s1-t4" name="Scenario: Home Page should contains some products on Best Sellers tab" line="35">
+<kw name="Open the browser" owner="home_steps" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:21:56.507551" level="INFO">Opening browser 'Chrome' to base url 'http://www.automationpractice.pl/index.php'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-22T17:21:56.507287" elapsed="6.496756"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1200</arg>
+<arg>800</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2025-02-22T17:22:03.004306" elapsed="0.041480"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:21:56.506864" elapsed="6.539121"/>
+</kw>
+<kw name="Given I am in the &quot;home&quot; page" owner="home_steps" source_name="Given I am in the &quot;${page}&quot; page">
+<if>
+<branch type="IF" condition="$page == &quot;home&quot;">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:22:03.047858" level="INFO">Executing JavaScript:
+window.location.href='/'
+Without any arguments.</msg>
+<arg>window.location.href='/'</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-22T17:22:03.047323" elapsed="0.942486"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:22:03.046994" elapsed="0.942917"/>
+</branch>
+<branch type="ELSE">
+<kw name="Log" owner="BuiltIn">
+<arg>"Error page not defined"</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" start="2025-02-22T17:22:03.990154" elapsed="0.000032"/>
+</kw>
+<status status="NOT RUN" start="2025-02-22T17:22:03.989974" elapsed="0.000251"/>
+</branch>
+<status status="PASS" start="2025-02-22T17:22:03.046951" elapsed="0.943331"/>
+</if>
+<status status="PASS" start="2025-02-22T17:22:03.046589" elapsed="0.943756"/>
+</kw>
+<kw name="When I click on &quot;Best Sellers&quot; tab" owner="home_steps" source_name="When I click on &quot;${tabName}&quot; tab">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:22:03.991196" level="INFO">Clicking element 'xpath://a[text()='Best Sellers']'.</msg>
+<arg>xpath://a[text()='${tabName}']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T17:22:03.990960" elapsed="0.110982"/>
+</kw>
+<status status="PASS" start="2025-02-22T17:22:03.990651" elapsed="0.111529"/>
+</kw>
+<kw name="And I click on Quick View for the first item" owner="home_steps">
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath:(//div[@class='product-image-container'])[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-02-22T17:22:04.102962" elapsed="0.298376"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:22:04.402212" level="INFO">Executing JavaScript:
+document.evaluate("(//a[@class='quick-view'])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.style.display = "block";
+Without any arguments.</msg>
+<arg>document.evaluate("(//a[@class='quick-view'])[1]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.style.display = "block";</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-02-22T17:22:04.401657" elapsed="0.010263"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:22:04.412534" level="INFO">Clicking element 'xpath:(//a[@class='quick-view'])[1]'.</msg>
+<arg>xpath:(//a[@class='quick-view'])[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T17:22:04.412217" elapsed="0.083761"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-02-22T17:22:09.625088" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-22T17:22:09.625333" level="FAIL">Element 'xpath://body[@id='product']' not visible after 5 seconds.</msg>
+<arg>xpath://body[@id='product']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-02-22T17:22:04.496317" elapsed="5.132130">Element 'xpath://body[@id='product']' not visible after 5 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-02-22T17:22:04.102586" elapsed="5.526122">Element 'xpath://body[@id='product']' not visible after 5 seconds.</status>
+</kw>
+<kw name="Then I see a modal with some data of the product" owner="home_steps">
+<status status="NOT RUN" start="2025-02-22T17:22:09.629130" elapsed="0.000044"/>
+</kw>
+<kw name="And I see the product images" owner="home_steps">
+<status status="NOT RUN" start="2025-02-22T17:22:09.629423" elapsed="0.000053"/>
+</kw>
+<kw name="And I see the product price, size input and available colors" owner="home_steps">
+<status status="NOT RUN" start="2025-02-22T17:22:09.629812" elapsed="0.000046"/>
+</kw>
+<status status="FAIL" start="2025-02-22T17:21:56.505967" elapsed="13.124177">Element 'xpath://body[@id='product']' not visible after 5 seconds.</status>
+</test>
+<doc>Home pages tests from the e-commerce
+As a user
+I want to view the home page
+So that I can see the main sections of the website</doc>
+<status status="FAIL" start="2025-02-22T17:21:33.967798" elapsed="35.663355"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Home Tests" id="s1" pass="3" fail="1" skip="0">Home Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-02-22T17:21:56.506092" level="WARN">Multiple tests with name 'Scenario: Home Page should contains some products on Best Sellers tab' executed in suite 'Home Tests'.</msg>
+</errors>
+</robot>
